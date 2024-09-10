@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b182pw53ge618"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_dupof"]
+[ext_resource type="Texture2D" uid="uid://c2g47k3yara4o" path="res://gordon sprite inte copyright.png" id="1_t5pdp"]
+[ext_resource type="PackedScene" uid="uid://biko1wxe1ejje" path="res://block.tscn" id="3_462kn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq7dl"]
+size = Vector2(160, 206)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_dupof")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(365, 906)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_t5pdp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(365, 903)
+shape = SubResource("RectangleShape2D_mq7dl")
+
+[node name="Node2D" parent="CharacterBody2D" instance=ExtResource("3_462kn")]
+position = Vector2(1, -5)
+
+[node name="Node2D2" parent="CharacterBody2D" instance=ExtResource("3_462kn")]
+position = Vector2(783, 10)

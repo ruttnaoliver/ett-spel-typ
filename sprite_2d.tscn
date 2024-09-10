@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgjalkb006ble"]
+
+[ext_resource type="Texture2D" uid="uid://c2g47k3yara4o" path="res://gordon sprite inte copyright.png" id="1_75lok"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_75lok")
+
+[node name="Node2D" type="Node2D" parent="."]
